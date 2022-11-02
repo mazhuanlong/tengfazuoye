@@ -15,3 +15,8 @@ export function getNew(obj){
         url:baseUrl+`/tfcar/newCar/list`
     })
 }
+export function getNew2(obj){
+    return axios({
+        url:baseUrl+`/tfcar/newCar/list`
+    })
+}
