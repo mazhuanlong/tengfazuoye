@@ -1,0 +1,102 @@
+<view class="xiangqing">
+    <!-- 轮播图 -->
+    <view class="box">
+        <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000">
+            <block wx:for="{{banner}}" wx:key="item">
+                <swiper-item>
+                    <image src='{{item}}' class="img" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 价格 -->
+    <view class="bgc">
+        <view class="price">
+            <text class="text">{{obj.currentPrice}}万</text>
+            <text class="text span">不含过户费</text>
+        </view>
+        <view class="price2">新车完税价： 0万 为您节约-万</view>
+    </view>
+
+    <!-- 名字 -->
+    <view class="name">
+        <view class="yanyuan">严选好车</view>
+        <view class="ming">{{obj.carName}}</view>
+    </view>
+
+    <view class="iii">
+        <image class="image" src="../../imgs/jie.png"></image>
+    </view>
+
+    <view class="fuwu">
+        <image class="image" src="../../imgs/fuwu.png"></image>
+    </view>
+
+    <!-- 基本信息 -->
+    <view class="news">
+        <view class="title">基本信息</view>
+        <view class="xin">
+            <view class="kuai hnk">
+                <view class="hnk biao">上牌时间</view>
+                <view class="hnk nei">{{time}}</view>
+            </view>
+
+            <view class="kuai hnk">
+                <view class="hnk biao">公里数</view>
+                <view class="hnk nei">{{obj.mileage}}万公里</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">车身颜色</view>
+                <view class="hnk nei">{{obj.parameterVo.carColor}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">变速箱</view>
+                <view class="hnk nei">{{obj.parameterVo.gearbox}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">排量</view>
+                <view class="hnk nei">{{obj.displacement}}L</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">排放标准</view>
+                <view class="hnk nei">{{obj.parameterVo.emissionStandard}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">燃油方式</view>
+                <view class="hnk nei">{{obj.parameterVo.fuel}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">过户次数</view>
+                <view class="hnk nei">{{obj.parameterVo.carTransfer}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">出厂日期</view>
+                <view class="hnk nei">{{time2}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">座位数</view>
+                <view class="hnk nei">{{obj.seat}}座</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">驱动方式</view>
+                <view class="hnk nei">{{obj.parameterVo.drive}}</view>
+            </view>
+            <view class="kuai hnk">
+                <view class="hnk biao">车辆描述</view>
+                <view class="hnk nei">暂无</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="ibox">
+    <image class="image" src="../../imgs/jian.png">
+    </image>
+    </view>
+
+    <view class="iibox">
+        <view class="title">车辆图片</view>
+        <view class="imgBox" wx:for="{{img}}" wx:key="index">
+        <image class="image" src="{{item}}"></image>
+        </view>
+    </view>
+</view>

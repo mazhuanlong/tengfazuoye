@@ -1,0 +1,41 @@
+<!--pages/ershouche/ershouche.wxml-->
+<view class="header">
+    <text class="text" bindtap="dian1">品牌</text>
+    <text class="text" bindtap="dian2">车系</text>
+    <text class="text" bindtap="dian3">车型</text>
+</view>
+<!-- 车系 -->
+<view class="yin2" style="width: {{w}}rpx;">
+    <view class="chexi">
+        <view bindtap="chexii" class="list" wx:for="{{xi}}" wx:key="index" id="{{item.id}}">{{item.abbreviation}}</view>
+    </view>
+</view>
+<!-- 品牌 -->
+<view class="yin1" style="height: {{h1}}rpx;">
+    <view class="name" wx:for="{{pin}}" wx:key="index" bindtap="pinpai" id="{{item.id}}">
+        <image class="image" src='{{item.imageUrl}}'></image>
+        <text>{{item.brand}}</text>
+    </view>
+</view>
+<!-- 车型 -->
+<view  class="yin3" style="height: {{h2}}rpx;">
+    <view class="hnk kk" wx:for="{{chexing}}" wx:key="index" id="{{item.id}}" bindtap="chexingg">
+    <image class="image" src='{{item.logo}}'></image>
+    <text>{{item.model}}</text>
+    </view>
+</view>
+<!-- 列表 -->
+<view class="listul">
+    <view class="list" wx:for="{{list}}" wx:key="index" wx:if="{{list.length}}">
+        <image src="{{item.cover}}"></image>
+        <view class="list-title">{{item.carName}}
+        </view>
+        <view class="list-msg">
+            2019年01月 / {{item.mileage}}万公里
+        </view>
+        <view class="list-price">37.9万</view>
+    </view>
+    <view class="none" wx:if="{{!list.length}}">
+        暂时没有跟多
+    </view>
+</view>
