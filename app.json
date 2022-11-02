@@ -1,0 +1,30 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/ershou/ershou"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "/imgs/shouye1.png",
+                "selectedIconPath": "/imgs/shouye.png"
+            },
+            {
+                "text": "二手车",
+                "pagePath": "pages/ershou/ershou",
+                "iconPath": "/imgs/31liebiao1.png",
+                "selectedIconPath": "/imgs/31liebiao.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
