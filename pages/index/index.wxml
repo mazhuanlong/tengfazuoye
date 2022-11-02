@@ -1,0 +1,63 @@
+<view class="top">
+  <view class="top-left">
+    <image src="../../imgs/下载.png"></image>
+    <text>全国</text>
+  </view>
+  <view class="top-right">
+    <view class="inp">
+      <image src="../../imgs/搜索 (3).png"></image><input type="text" placeholder="搜索品牌丶车型" />
+    </view>
+  </view>
+</view>
+
+<view class="imgbox">
+  <image src="../../imgs/截图.png"></image>
+</view>
+
+<view class="xuan">
+  <image src="../../imgs/便捷选车.png" class="xuan-top"></image>
+  <view class="ulone">
+    <view class="lione" wx:for="{{typeOne}}" wx:key="index" bindtap="tiao" data-id="{{item.sortValue}}">
+      <image src="{{item.logo}}"></image>
+      <view class="text">{{item.label}}</view>
+    </view>
+  </view>
+  <view class="ultwo">
+    <view class="litwo" wx:for="{{typeTwo}}" wx:key="index" bindtap="tiao" data-id="{{item.sortValue}}">{{item.label}}</view>
+  </view>
+</view>
+
+<view class="ershouche">
+  <image src="../../imgs/二手车导航.png"></image>
+</view>
+
+<view class="listul">
+
+
+
+  <view class="list" wx:for="{{list}}" wx:key="index" >
+    <image src="{{item.cover}}"></image>
+    <view class="list-title">{{item.carName}}
+    </view>
+    <view class="list-msg">
+      2019年01月 / {{item.mileage}}万公里
+    </view>
+    <view class="list-price">37.9万</view>
+  </view>
+
+</view>
+
+<view class="newcar">
+<image src="../../imgs/新车.png"></image>
+</view>
+<view class="new-title">
+ {{newList.carBrandMarker}}
+</view>
+<view class="new-msg">
+<view class="msgone">{{newList.type}}</view>
+<view class="msgtwo">{{newList.colorLabel}}</view>
+
+</view>
+<view class="newprice">
+{{newList.currentPrice}}万
+</view>

@@ -1,7 +1,9 @@
 {
   "pages": [
+"pages/index/index",
       "pages/ershouche/ershouche",
-    "pages/xiangqing/xiangqing"
+    "pages/xiangqing/xiangqing"，
+  "pages/earch/earch"
     
   ],
   "window": {
@@ -10,6 +12,22 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
+ "tabBar": {
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "/imgs/shouye1.png",
+                "selectedIconPath": "/imgs/shouye.png"
+            },
+            {
+                "text": "二手车",
+                "pagePath": "pages/ershou/ershou",
+                "iconPath": "/imgs/31liebiao1.png",
+                "selectedIconPath": "/imgs/31liebiao.png"
+            }
+        ]
+    },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

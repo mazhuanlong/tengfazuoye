@@ -1,0 +1,2 @@
+<!--pages/earch/earch.wxml-->
+<map  longitude="34.70347" latitude="113.80495" class="map"></map>
